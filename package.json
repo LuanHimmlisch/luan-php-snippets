@@ -2,8 +2,12 @@
     "name": "luan-php-snippets",
     "displayName": "Luan's PHP Snippets",
     "description": "PHP useful Snippets pack",
+    "publisher": "LuanHimmlisch",
     "version": "1.0.0",
-    "icon": "https://github.com/LuanHimmlisch/luan-php-snippets/blob/main/assets/icon_128.png",
+    "repository": {
+        "url": "https://github.com/LuanHimmlisch/luan-php-snippets"
+    },
+    "icon": "assets/icon_128.png",
     "engines": {
         "vscode": "^1.55.0"
     },
