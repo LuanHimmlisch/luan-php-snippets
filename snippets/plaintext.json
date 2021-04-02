@@ -1,0 +1,16 @@
+{
+    "Open Tag": {
+        "prefix": "po",
+        "body": [
+            "<?php\n$0"
+        ],
+        "description": "PHP open tag"
+    },
+    "Close Tag": {
+        "prefix": "php",
+        "body": [
+            "<?php\n$0\n?>"
+        ],
+        "description": "PHP close tag"
+    }
+}

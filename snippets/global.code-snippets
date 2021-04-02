@@ -1,0 +1,146 @@
+{
+    "Public Class":{
+        "prefix": ["class","cls"],
+        "body": [
+            "namespace ${1:App}\\\\${2:$TM_FILENAME_BASE};",
+            "/**",
+            " * ",
+            " * Undefined class",
+            " * ",
+            "*/",
+            "class ${2:$TM_FILENAME_BASE}", 
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "class Filename"
+    },
+    "Public Constructor":{
+        "prefix": ["pc","construct"],
+        "body": [
+            "private ${2:Type} $${1:var};",
+            "",
+            "public function __construct(${2:Type} $${1:var})",
+            "{",
+            "\t\\$this->${1:var} = $${1:var};$0",
+            "}",
+        ],
+        "description": "public function __construct"
+    },
+    "Private Constructor":{
+        "prefix": "prc",
+        "body": [
+            "private function __construct()",
+            "{",
+            "\t\\$0",
+            "}",
+        ],
+        "description": "private function __construct"
+    },
+    "Protected Constructor":{
+        "prefix": "proc",
+        "body": [
+            "protected function __construct()",
+            "{",
+            "\t\\$0",
+            "}",
+        ],
+        "description": "protected function __constructor"
+    },
+    "Public Function":{
+        "prefix": "pf",
+        "body": [
+            "/**",
+            " * ",
+            " * Undefined function",
+            " * ",
+            " * @return ${2:Type} Returns data of type ${2:Type}",
+            " */",
+            "public function ${1:functionName}() : ${2:Type}",
+            "{",
+            "\t$0",
+            "}",
+        ],
+        "description": "public function"
+    },
+    "Public Static Function":{
+        "prefix": "psf",
+        "body": [
+            "/**",
+            " * ",
+            " * Undefined function",
+            " * ",
+            " * @return ${2:Type} Returns data of type ${2:Type}",
+            " */",
+            "public static function ${1:functionName}() : ${2:Type}",
+            "{",
+            "\t$0",
+            "}",
+        ],
+        "description": "public static function"
+    },
+    "Private Function":{
+        "prefix": "prf",
+        "body": [
+            "/**",
+            " * ",
+            " * Undefined function",
+            " * ",
+            " * @return ${2:Type} Returns data of type ${2:Type}",
+            " */",
+            "private function ${1:functionName}() : ${2:Type}",
+            "{",
+            "\t$0",
+            "}",
+        ],
+        "description": "private function"
+    },
+    "Private Static Function":{
+        "prefix": "prsf",
+        "body": [
+            "/**",
+            " * ",
+            " * Undefined function",
+            " * ",
+            " * @return ${2:Type} Returns data of type ${2:Type}",
+            " */",
+            "private static function ${1:functionName}() : ${2:Type}",
+            "{",
+            "\t$0",
+            "}",
+        ],
+        "description": "private static function"
+    },
+    "Protected Function":{
+        "prefix": "prof",
+        "body": [
+            "/**",
+            " * ",
+            " * Undefined function",
+            " * ",
+            " * @return ${2:Type} Returns data of type ${2:Type}",
+            " */",
+            "protected function ${1:functionName}() : ${2:Type}",
+            "{",
+            "\t$0",
+            "}",
+        ],
+        "description": "protected function"
+    },
+    "Protected Static Function":{
+        "prefix": "prosf",
+        "body": [
+            "/**",
+            " * ",
+            " * Undefined function",
+            " * ",
+            " * @return ${2:Type} Returns data of type ${2:Type}",
+            " */",
+            "protected static function ${1:functionName}() : ${2:Type}",
+            "{",
+            "\t$0",
+            "}",
+        ],
+        "description": "protected static function"
+    },
+}
