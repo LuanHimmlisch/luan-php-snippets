@@ -2,7 +2,7 @@
 
 This extension includes full featured PSR-compliant PHP snippets for an easy and quick development. 
 
-![Showcase](assets/showcase.gif)
+![Showcase](https://github.com/LuanHimmlisch/luan-php-snippets/blob/main/assets/showcase.gif)
 
 **No large snippets! No undocummented functions!**
 
