@@ -4,14 +4,12 @@
         "body": [
             "namespace ${1:App}\\\\${2:$TM_FILENAME_BASE};",
             "/**",
-            " * ",
             " * Undefined class",
-            " * ",
-            "*/",
+            " */",
             "class ${2:$TM_FILENAME_BASE}", 
             "{",
             "\t$0",
-            "}"
+            "}\n"
         ],
         "description": "class Filename"
     },
@@ -32,7 +30,7 @@
         "body": [
             "private function __construct()",
             "{",
-            "\t\\$0",
+            "\t$0",
             "}",
         ],
         "description": "private function __construct"
@@ -42,7 +40,7 @@
         "body": [
             "protected function __construct()",
             "{",
-            "\t\\$0",
+            "\t$0",
             "}",
         ],
         "description": "protected function __constructor"
@@ -51,7 +49,6 @@
         "prefix": "pf",
         "body": [
             "/**",
-            " * ",
             " * Undefined function",
             " * ",
             " * @return ${2:Type} Returns data of type ${2:Type}",
@@ -67,7 +64,6 @@
         "prefix": "psf",
         "body": [
             "/**",
-            " * ",
             " * Undefined function",
             " * ",
             " * @return ${2:Type} Returns data of type ${2:Type}",
@@ -83,7 +79,6 @@
         "prefix": "prf",
         "body": [
             "/**",
-            " * ",
             " * Undefined function",
             " * ",
             " * @return ${2:Type} Returns data of type ${2:Type}",
@@ -99,7 +94,6 @@
         "prefix": "prsf",
         "body": [
             "/**",
-            " * ",
             " * Undefined function",
             " * ",
             " * @return ${2:Type} Returns data of type ${2:Type}",
@@ -115,7 +109,6 @@
         "prefix": "prof",
         "body": [
             "/**",
-            " * ",
             " * Undefined function",
             " * ",
             " * @return ${2:Type} Returns data of type ${2:Type}",
@@ -131,7 +124,6 @@
         "prefix": "prosf",
         "body": [
             "/**",
-            " * ",
             " * Undefined function",
             " * ",
             " * @return ${2:Type} Returns data of type ${2:Type}",
@@ -142,5 +134,195 @@
             "}",
         ],
         "description": "protected static function"
+    },
+    "Public Variable":{
+        "prefix": "pv",
+        "body": [
+            "/**",
+            " * Undefined property",
+            " * @var ${2:Type}",
+            " */",
+            "public ${2:Type} \\$${1:myVar};$0"
+        ],
+        "description": "public Type myVar"
+    },
+    "Public Static Variable":{
+        "prefix": "psv",
+        "body": [
+            "/**",
+            " * Undefined property",
+            " * @var ${2:Type}",
+            " */",
+            "public static ${2:Type} \\$${1:myVar};$0"
+        ],
+        "description": "public static Type myVar"
+    },
+    "Private Variable":{
+        "prefix": "prv",
+        "body": [
+            "/**",
+            " * Undefined property",
+            " * @var ${2:Type}",
+            " */",
+            "private ${2:Type} \\$${1:myVar};$0"
+        ],
+        "description": "private Type myVar"
+    },
+    "Private Static Variable":{
+        "prefix": "prsv",
+        "body": [
+            "/**",
+            " * Undefined property",
+            " * @var ${2:Type}",
+            " */",
+            "private static ${2:Type} \\$${1:myVar};$0"
+        ],
+        "description": "private static Type myVar"
+    },
+    "Protected Variable":{
+        "prefix": "prov",
+        "body": [
+            "/**",
+            " * Undefined property",
+            " * @var ${2:Type}",
+            " */",
+            "protected ${2:Type} \\$${1:myVar};$0"
+        ],
+        "description": "protected Type myVar"
+    },
+    "Protected Static Variable":{
+        "prefix": "prosv",
+        "body": [
+            "/**",
+            " * Undefined property",
+            " * @var ${2:Type}",
+            " */",
+            "protected static ${2:Type} \\$${1:myVar};$0"
+        ],
+        "description": "protected static Type myVar"
+    },
+    "For":{
+        "prefix": "for",
+        "body": [
+            "for (\\$${2:i} = 0; \\$${2:i} < count(\\$${1:array}); \\$${1:i}++)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "for($i = 0; $i < count(array); $i++)"
+    },
+    "For Each":{
+        "prefix": "fore",
+        "body": [
+            "foreach (\\$${1:items} as \\$item)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "foreach($items as $item)"
+    },
+    "For Each Key":{
+        "prefix": "forek",
+        "body": [
+            "foreach (\\$${1:items} as \\$key => \\$item)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "foreach($items as $key => $item)"
+    },
+    "Try Catch":{
+        "prefix": "try",
+        "body": [
+            "try",
+            "{",
+            "\t$0",
+            "}",
+            "catch (\\\\Throwable $e)",
+            "{",
+            "\t",
+            "}",
+
+        ],
+        "description": "try { } catch(\\Throwable $e)"
+    },
+    "Switch":{
+        "prefix": ["sw","switch"],
+        "body": [
+            "switch (\\$${1:state})",
+            "{",
+            "\tcase ${1}:",
+            "\t$0",
+            "\tbreak;",
+            "\ndefault:",
+            "break;",
+            "}"
+        ],
+        "description": "switch { ... }"
+    },
+    "Case":{
+        "prefix": "case",
+        "body": [
+            "case ${1}:",
+            "$0",
+            "break;",
+        ],
+        "description": "case ... : break;"
+    },
+    "Throw":{
+        "prefix": ["th","throw"],
+        "body": "throw new Exception('Error processing request!', 1);",
+        "description": ""
+    },
+    "Include":{
+        "prefix": "inc",
+        "body": "include __DIR__.'/$0';",
+        "description": "include"
+    },
+    "Include Once":{
+        "prefix": "inco",
+        "body": "include_once __DIR__.'/$0';",
+        "description": "include_once"
+    },
+    "Require":{
+        "prefix": "req",
+        "body": "require __DIR__.'/$0';",
+        "description": "require"
+    },
+    "Require Once":{
+        "prefix": "reqo",
+        "body": "require_once __DIR__.'/$0';",
+        "description": "require_once"
+    },
+    "Echo":{
+        "prefix": ["eco","echo"],
+        "body": "echo '$0';",
+        "description": "echo"
+    },
+    "Print":{
+        "prefix": ["pr","print"],
+        "body": "print_r(\\$${1:arr});$0",
+        "description": "print_r"
+    },
+    "Var Dump":{
+        "prefix": ["dd","dump"],
+        "body": "var_dump(\\$${1:arr});$0",
+        "description": "var_dump"
+    },
+    "Return":{
+        "prefix": ["return","r"],
+        "body": "return $0;"
+        ,
+        "description": "return"
+    },
+    "Define":{
+        "prefix": "def",
+        "body": [
+            "/**",
+            " * Undefined constant",
+            " */",
+            "define('${1:NAME}',$0);"
+        ],
+        "description": "define"
     },
 }
